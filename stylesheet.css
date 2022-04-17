@@ -1,68 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 
-        #div1{
-            background-color: gray;
-            width: 30%;
-            float:right;
-            overflow: hidden;
-            height: 250px;
-        }
-        #div2{
-            background-color: gray;
-            width: 30%;
-            float:left;
-            height: 250px;
-            overflow: hidden;
-            
-            
-            
-        }
-        #div3{
-            background-color: gray;
-            width: 30%;
-            margin:0 auto ;
-            height: 250px;
-            overflow: hidden;
-            
-            
-        }
-        @media(min-width:768px) and (max-width:991px) {
-            #div1{
-                width:45%;
-                height:200px;
-                margin: 10px;
-            }
-            #div2{
-                width:45%;
-                height:200px;
-                margin:10px;
-            }
-            #div3{
-                width:90%;
-                height:100px;
-                
-                background-color:gray;
-               
-                margin:0 auto;       
-            }
-            
-
-        }
-        @media(max-width:767px) {
-            #div1{
-                width: 70%;
-                margin-right: 95px;
-                
-            }
-            #div2{
-                width: 70%;
-                margin: 20px;
-                margin-left: 90px;
-                margin-right: 180px;
-            }
-            #div3{
-                width:70%;
-                
-                
-            }
-        }
+}
+nav{
+    background-color:brown;
+    height:80px;
+    width: 100%;
+}
+label.logo{
+    color:white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
     
+}
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+nav ul li{
+    
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color:gray;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: blue;
+    
+}
+.checkbtn{
+    font-size: 30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+    a:hover,a.active{
+        background: none;
+    }
+
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+
+    }
+    a:hover,a.active{
+        background: none;
+    }
+    
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        top:80px;
+        left:-100%;
+        background-color:chartreuse;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+#div1{
+    background-color: gray;
+    width: 30%;
+    float:right;
+    overflow: hidden;
+    height: 250px;
+}
+#div2{
+    background-color: gray;
+    width: 30%;
+    float:left;
+    height: 250px;
+    overflow: hidden;
+    
+    
+    
+}
+#div3{
+    background-color: gray;
+    width: 30%;
+    margin:0 auto ;
+    height: 250px;
+    overflow: hidden;
+    
+    
+}
+@media(min-width:601px) and (max-width:991px) {
+    #div1{
+        width:45%;
+        height:200px;
+        margin: 10px;
+    }
+    #div2{
+        width:45%;
+        height:200px;
+        margin:10px;
+    }
+    #div3{
+        width:90%;
+        height:100px;
+        
+        background-color:gray;
+       
+        margin:0 auto;       
+    }
+}
+@media screen  and (max-width:600px){
+    #div1{
+        width: 70%;
+        margin-right: 50px;
+        
+    }
+    #div2{
+        width: 70%;
+        margin: 20px;
+        margin-left: 90px;
+        margin-right: 500px;
+    }
+    #div3{
+        width:70%;
+        margin-left: 90px;
+        
+        
+    }
+}
+
